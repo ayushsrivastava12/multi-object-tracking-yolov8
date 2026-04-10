@@ -1,0 +1,25 @@
+Technical Report
+
+Model Used:
+YOLOv8 was used for object detection due to its high speed and accuracy.
+
+Tracking Algorithm:
+DeepSORT was used for tracking as it combines motion and appearance features, improving ID consistency.
+
+Reason for Selection:
+The combination provides a balance between performance and ease of implementation. DeepSORT helps reduce ID switching during occlusion and similar appearances.
+
+Challenges:
+- Occlusion between players
+- Motion blur
+- Fast camera movement
+- Similar-looking objects
+
+Failure Cases:
+- Long occlusion leads to ID reassignment
+- Sudden scene changes
+
+Improvements:
+- Use a fine-tuned detection model
+- Add stronger re-identification features
+- Improve parameter tuning
