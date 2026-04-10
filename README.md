@@ -1,35 +1,48 @@
-# Multi-Object Detection and Tracking
+# 🎯 Multi-Object Detection and Tracking using YOLOv8
 
-## Overview
-This project performs multi-object detection and tracking on sports/event video using YOLOv8 and DeepSORT.
+## 📌 Overview
+This project implements a real-time multi-object detection and tracking system using YOLOv8 and ByteTrack. The system detects multiple objects in a video and assigns a unique ID to each object, maintaining consistency across frames.
 
-## Features
-- Detects multiple objects (players/people)
-- Assigns unique IDs
-- Maintains ID consistency across frames
-- Handles occlusion and motion
+---
 
-## Technologies Used
-- Python
-- YOLOv8 (Ultralytics)
-- DeepSORT
-- OpenCV
+## 🚀 Features
+- Real-time object detection using YOLOv8  
+- Multi-object tracking with persistent ID assignment  
+- Bounding box visualization with labels  
+- Handles multiple moving objects in video  
+- Filters low-confidence detections for improved stability  
 
-## How to Run
-1. Install dependencies:
-   pip install ultralytics opencv-python deep-sort-realtime
+---
 
-2. Run:
-   python main.py
+## 🧠 Technologies Used
+- Python  
+- OpenCV  
+- Ultralytics YOLOv8  
+- Supervision (ByteTrack)
 
-## Output
-- Annotated video saved as output.mp4
+---
 
-## Challenges
-- ID switching during occlusion
-- Similar-looking players
+## ⚙️ How It Works
 
-## Improvements
-- Can use custom trained model
-- Add re-identification model
-- Improve tracking with more tuning
+1. **Load YOLOv8 Model**
+   - Pre-trained model (`yolov8n.pt`) is used for object detection.
+
+2. **Read Video**
+   - Input video is processed frame-by-frame using OpenCV.
+
+3. **Object Detection**
+   - YOLO detects objects and returns bounding boxes and confidence scores.
+
+4. **Filter Detections**
+   - Low-confidence detections are removed to improve tracking accuracy.
+
+5. **Object Tracking**
+   - ByteTrack assigns unique IDs and tracks objects across frames.
+
+6. **Annotation**
+   - Bounding boxes and IDs are drawn on each frame.
+
+7. **Output**
+   - Processed video is displayed and saved as `output.mp4`.
+
+---
