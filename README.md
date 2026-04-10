@@ -1,11 +1,11 @@
-# 🎯 Multi-Object Detection and Tracking using YOLOv8
+# Multi-Object Detection and Tracking using YOLOv8
 
-## 📌 Overview
+## Overview
 This project implements a real-time multi-object detection and tracking system using YOLOv8 and ByteTrack. The system detects multiple objects in a video and assigns a unique ID to each object, maintaining consistency across frames.
 
 ---
 
-## 🚀 Features
+## Features
 - Real-time object detection using YOLOv8  
 - Multi-object tracking with persistent ID assignment  
 - Bounding box visualization with labels  
@@ -14,7 +14,7 @@ This project implements a real-time multi-object detection and tracking system u
 
 ---
 
-## 🧠 Technologies Used
+## Technologies Used
 - Python  
 - OpenCV  
 - Ultralytics YOLOv8  
@@ -22,7 +22,7 @@ This project implements a real-time multi-object detection and tracking system u
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. **Load YOLOv8 Model**
    - Pre-trained model (`yolov8n.pt`) is used for object detection.
